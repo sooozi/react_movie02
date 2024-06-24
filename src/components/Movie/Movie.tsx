@@ -1,4 +1,5 @@
 import useMovies from '../../hooks/useMovies';
+import { MoviePropTypes } from './MoviePropTypes';
 
 const Movie = () => {
     const { movies, loading, error } = useMovies();
@@ -12,8 +13,7 @@ const Movie = () => {
     }
 
   return (
-    <div>
-      <ul>
+      <ul className="movie_wrap">
         {movies.map(movie => (
             <li key={movie.id}>
                 <h2>{movie.title}</h2>
@@ -22,9 +22,10 @@ const Movie = () => {
             </li>
         ))}
       </ul>
-    </div>
   );
 };
+
+Movie.propTypes = MoviePropTypes;
 
 export default Movie;
 
