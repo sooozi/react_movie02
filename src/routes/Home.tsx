@@ -15,7 +15,10 @@ const Home = () => {
     <div>
       <ul>
         {movies.map(movie => (
-            <li key={movie.id}>{movie.title}</li>
+            <li key={movie.id}>
+                <h2>{movie.title}</h2>
+                <img src={movie.medium_cover_image} alt="" />
+            </li>
         ))}
       </ul>
     </div>
