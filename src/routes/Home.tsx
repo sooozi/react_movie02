@@ -3,7 +3,7 @@ import Movie from '../components/Movie/Movie';
 const Home = () => {
   return (
     <div>
-        <Movie />
+        <Movie id={0} summary={''} title={''} medium_cover_image={''} />
     </div>
   );
 };
