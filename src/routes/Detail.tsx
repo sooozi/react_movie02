@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import useMovies from '../hooks/useMovies';
+import React from 'react';
 
 const Detail = () => {
     const { id } = useParams(); // URL에서 파라미터(id) 확인
