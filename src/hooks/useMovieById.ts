@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { getMovie } from '../apis/movie.api';
 
 const useMovieById = (id: number) => {
-    const [movie, setMovie] = useState<any>(null);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [movie, setMovie] = useState(null);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {

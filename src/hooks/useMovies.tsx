@@ -3,7 +3,7 @@ import { getMovie } from '../apis/movie.api';
 
 const useMovies = () => {
     const [movies, setMovies] = useState<any[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
