@@ -4,7 +4,7 @@ export const getMovie = async () => {
             `https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year`,
         );
         const json = await response.json();
-        return json.datal;
+        return json.data;
     } catch (error) {
         console.error('영화 데이터 가져오는 중 오류 발생:', error);
     }
