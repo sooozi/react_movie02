@@ -1,4 +1,8 @@
 {
+  "env": {
+      "browser": true,
+      "node": true
+  },
   "extends": [
     "react-app",
     "airbnb",
@@ -9,16 +13,26 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["import", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off"
   },
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+  },
+  "ignorePatterns": ["node_modules/", "tsconfig.json"],
   "settings": {
     "react": {
       "version": "detect" // React 버전을 자동으로 감지
+    },
+    "import/resolver": {
+        "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
     }
   }
 }
