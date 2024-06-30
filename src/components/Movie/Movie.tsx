@@ -14,19 +14,19 @@ const Movie = () => {
         return <div>{error}</div>;
     }
 
-  return (
-      <ul className={styled.movieWrap}>
-        {movies.map(movie => (
-            <Link to={`/movie/${movie.id}`}>
-                <li key={movie.id}>
-                    <h2>{movie.title}</h2>
-                    <img src={movie.medium_cover_image} alt={movie.title} />
-                    <p>{movie.summary}</p>
-                </li>
-            </Link>
-        ))}
-      </ul>
-  );
+    return (
+        <ul className={styled.movieWrap}>
+            {movies.map(movie => (
+                <Link to={`/movie/${movie.id}`}>
+                    <li key={movie.id}>
+                        <h2>{movie.title}</h2>
+                        <img src={movie.medium_cover_image} alt={movie.title} />
+                        <p>{movie.summary}</p>
+                    </li>
+                </Link>
+            ))}
+        </ul>
+    );
 };
 
 Movie.propTypes = MoviePropTypes;

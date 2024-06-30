@@ -1,27 +1,27 @@
-import { useEffect, useState } from 'react';
-import { getMovie } from '../apis/movie.api';
+// import { useEffect, useState } from 'react';
+// import { getMovie } from '../apis/movie.api';
 
-const useMovieById = (id: number) => {
-    const [movie, setMovie] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+// const useMovieById = (id: number) => {
+//     const [movie, setMovie] = useState(null);
+//     const [loading, setLoading] = useState(true);
+//     const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        const fetchMovie = async () => {
-            try {
-                const movieData = await getMovie();
-                setMovie(movieData);
-            } catch (error) {
-                setError('영화 데이터를 가져오는 중 오류가 발생했습니다.');
-            } finally {
-                setLoading(false);
-            }
-        };
+//     useEffect(() => {
+//         const fetchMovie = async () => {
+//             try {
+//                 const movieData = await getMovie();
+//                 setMovie(movieData);
+//             } catch (error) {
+//                 setError('영화 데이터를 가져오는 중 오류가 발생했습니다.');
+//             } finally {
+//                 setLoading(false);
+//             }
+//         };
 
-        fetchMovie();
-    }, [id]);
+//         fetchMovie();
+//     }, [id]);
 
-    return { movie, loading, error };
-};
+//     return { movie, loading, error };
+// };
 
-export default useMovieById;
+// export default useMovieById;
